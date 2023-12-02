@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="resturantModelStoreContainer" CdmEntityContainer="resturantEntities">
+    <EntitySetMapping Name="C_branch">
+      <EntityTypeMapping TypeName="resturantModel.C_branch">
+        <MappingFragment StoreEntitySet="_branch">
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="b_name" ColumnName="b_name" />
+          <ScalarProperty Name="b_address" ColumnName="b_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_customers">
+      <EntityTypeMapping TypeName="resturantModel.C_customers">
+        <MappingFragment StoreEntitySet="_customers">
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="c_name" ColumnName="c_name" />
+          <ScalarProperty Name="c_phone" ColumnName="c_phone" />
+          <ScalarProperty Name="c_location" ColumnName="c_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_food">
+      <EntityTypeMapping TypeName="resturantModel.C_food">
+        <MappingFragment StoreEntitySet="_food">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_managers">
+      <EntityTypeMapping TypeName="resturantModel.C_managers">
+        <MappingFragment StoreEntitySet="_managers">
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="m_password" ColumnName="m_password" />
+          <ScalarProperty Name="m_salary" ColumnName="m_salary" />
+          <ScalarProperty Name="m_phone" ColumnName="m_phone" />
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_orders">
+      <EntityTypeMapping TypeName="resturantModel.C_orders">
+        <MappingFragment StoreEntitySet="_orders">
+          <ScalarProperty Name="o_id" ColumnName="o_id" />
+          <ScalarProperty Name="o_date" ColumnName="o_date" />
+          <ScalarProperty Name="f_name" ColumnName="f_name" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_staff">
+      <EntityTypeMapping TypeName="resturantModel.C_staff">
+        <MappingFragment StoreEntitySet="_staff">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="s_password" ColumnName="s_password" />
+          <ScalarProperty Name="s_salary" ColumnName="s_salary" />
+          <ScalarProperty Name="s_age" ColumnName="s_age" />
+          <ScalarProperty Name="s_phone" ColumnName="s_phone" />
+          <ScalarProperty Name="s_specialty" ColumnName="s_specialty" />
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

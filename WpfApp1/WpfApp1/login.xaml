@@ -1,0 +1,26 @@
+﻿<Page x:Class="WpfApp1.login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="login">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF15D1CA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="400,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="400,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Foreground="White" Content="name" HorizontalAlignment="Left" Margin="202,126,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Content="password" HorizontalAlignment="Left" Margin="192,225,0,0" VerticalAlignment="Top"/>
+        <Button Content="login" HorizontalAlignment="Left" Margin="709,331,0,0" VerticalAlignment="Top" Click="login_button"/>
+        <Button Content="create account" HorizontalAlignment="Left" Margin="248,326,0,0" VerticalAlignment="Top" Click="signup_button"/>
+
+    </Grid>
+</Page>

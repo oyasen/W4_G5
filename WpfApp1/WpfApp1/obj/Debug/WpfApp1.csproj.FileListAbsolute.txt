@@ -189,3 +189,53 @@ G:\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 G:\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
 G:\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 G:\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\EntityFramework.dll
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\EntityFramework.xml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\login.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manage customer.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manage orders.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manager staff.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manager.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manger branch.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manger_food.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\search.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\show customers.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\showfood.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\sign up.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\staff login.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\staff.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\welcome.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\login.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manage customer.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manage orders.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manager staff.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manager.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manger branch.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\manger_food.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\search.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\show customers.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\showfood.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\sign up.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\staff login.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\staff.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\welcome.baml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb

@@ -9,31 +9,39 @@
       Title="manager_staff">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="89*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FF15D1CA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Foreground="White" Content="password" HorizontalAlignment="Left" Margin="24,223,0,0" VerticalAlignment="Top" Width="160" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="name" HorizontalAlignment="Left" Margin="24,138,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="189,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="189,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <Button x:Name="add" Content="add" HorizontalAlignment="Left" Margin="37,379,0,0" VerticalAlignment="Top" Height="61" Width="82" FontFamily="Arial Black" FontSize="24" Click="add_button"/>
-        <Button x:Name="upd" Content="update" HorizontalAlignment="Left" Margin="469,379,0,0" VerticalAlignment="Top" Height="61" Width="100" FontFamily="Arial Black" FontSize="24" Click="update_button"/>
-        <Button x:Name="dele" Content="Delete" HorizontalAlignment="Left" Margin="239,381,0,0" VerticalAlignment="Top" Height="61" Width="110" FontFamily="Arial Black" FontSize="24" Click="delete_button"/>
-        <Label Foreground="White" Content="phone" HorizontalAlignment="Left" Margin="415,60,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="specialty" HorizontalAlignment="Left" Margin="405,223,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="branch" HorizontalAlignment="Left" Margin="415,138,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="phone_t" HorizontalAlignment="Left" Margin="570,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="spec_t" HorizontalAlignment="Left" Margin="570,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="branch_t" HorizontalAlignment="Left" Margin="570,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="salary" HorizontalAlignment="Left" Margin="24,295,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="salary_t" HorizontalAlignment="Left" Margin="189,297,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="age" HorizontalAlignment="Left" Margin="415,295,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="age_t" HorizontalAlignment="Left" Margin="570,297,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="id" HorizontalAlignment="Left" Margin="24,53,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="id_t" HorizontalAlignment="Left" Margin="189,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
+        <Label Foreground="White" Content="password" HorizontalAlignment="Left" Margin="24,0,0,0" VerticalAlignment="Center" Width="160" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="3"/>
+        <Label Foreground="White" Content="name" HorizontalAlignment="Left" Margin="24,10,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="2"/>
+        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="189,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="3"/>
+        <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="189,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="2"/>
+        <Button x:Name="add" Content="add" HorizontalAlignment="Left" Margin="37,18,0,0" VerticalAlignment="Top" Height="61" Width="82" FontFamily="Arial Black" FontSize="24" Click="add_button" Grid.Row="5"/>
+        <Button x:Name="upd" Content="update" HorizontalAlignment="Left" Margin="469,18,0,0" VerticalAlignment="Top" Height="61" Width="100" FontFamily="Arial Black" FontSize="24" Click="update_button" Grid.Row="5"/>
+        <Button x:Name="dele" Content="Delete" HorizontalAlignment="Left" Margin="239,20,0,0" VerticalAlignment="Top" Height="61" Width="110" FontFamily="Arial Black" FontSize="24" Click="delete_button" Grid.Row="5"/>
+        <Label Foreground="White" Content="phone" HorizontalAlignment="Left" Margin="415,25,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
+        <Label Foreground="White" Content="specialty" HorizontalAlignment="Left" Margin="405,0,0,0" VerticalAlignment="Center" Width="128" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="3"/>
+        <Label Foreground="White" Content="branch" HorizontalAlignment="Left" Margin="415,10,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="2"/>
+        <TextBox x:Name="phone_t" HorizontalAlignment="Left" Margin="570,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
+        <TextBox x:Name="spec_t" HorizontalAlignment="Left" Margin="570,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="3"/>
+        <TextBox x:Name="branch_t" HorizontalAlignment="Left" Margin="570,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="2"/>
+        <Label Foreground="White" Content="salary" HorizontalAlignment="Left" Margin="24,16,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="4"/>
+        <TextBox x:Name="salary_t" HorizontalAlignment="Left" Margin="189,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="4"/>
+        <Label Foreground="White" Content="age" HorizontalAlignment="Left" Margin="415,16,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="4"/>
+        <TextBox x:Name="age_t" HorizontalAlignment="Left" Margin="570,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="4"/>
+        <Label Foreground="White" Content="id" HorizontalAlignment="Left" Margin="24,18,0,0" VerticalAlignment="Top" Width="128" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
+        <TextBox x:Name="id_t" HorizontalAlignment="Left" Margin="189,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
 
     </Grid>
 </Page>

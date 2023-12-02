@@ -9,17 +9,22 @@
       Title="staff_login">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="237*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FF15D1CA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="name" Foreground="Snow" FontSize="44" HorizontalAlignment="Left" Margin="27,28,0,0" VerticalAlignment="Top" Width="159" Height="90"/>
-        <Label Content="password" Foreground="Snow" FontSize="44" HorizontalAlignment="Left" Margin="27,123,0,0" VerticalAlignment="Top" Height="73" Width="215"/>
+        <Label Content="name" Foreground="Snow" FontSize="44" HorizontalAlignment="Left" Margin="27,28,0,0" VerticalAlignment="Top" Width="159" Height="90" Grid.RowSpan="2"/>
+        <Label Content="password" Foreground="Snow" FontSize="44" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Top" Height="73" Width="215" Grid.Row="1"/>
         <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="244,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="277" Height="62"/>
-        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="242,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" Height="62"/>
-        <Button Content="login" Background="#FF79F9F4" FontSize="30" HorizontalAlignment="Left" Margin="431,328,0,0" VerticalAlignment="Top" Height="64" Width="261" Click="Button_Click"/>
+        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="242,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" Height="62" Grid.Row="1"/>
+        <Button Content="login" Background="#FF79F9F4" FontSize="30" HorizontalAlignment="Left" Margin="431,116,0,0" VerticalAlignment="Top" Height="64" Width="261" Click="Button_Click" Grid.Row="2"/>
 
     </Grid>
 </Page>

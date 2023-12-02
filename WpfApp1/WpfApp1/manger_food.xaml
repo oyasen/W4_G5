@@ -9,6 +9,11 @@
       Title="manger_food">
 
     <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="217*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -16,12 +21,12 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Foreground="White" Content="name" HorizontalAlignment="Left" Margin="40,60,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24"/>
-        <Label Foreground="White" Content="price" HorizontalAlignment="Left" Margin="40,138,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24"/>
+        <Label Foreground="White" Content="price" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" Width="108" Height="38" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
         <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="195,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <TextBox x:Name="price_t" HorizontalAlignment="Left" Margin="195,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" FontFamily="Arial Black" FontSize="24"/>
-        <Button x:Name="add" Content="add" HorizontalAlignment="Left" Margin="51,252,0,0" VerticalAlignment="Top" Height="36" Width="82" FontFamily="Arial Black" FontSize="24" Click="add_Click"/>
-        <Button x:Name="upd" Content="update" HorizontalAlignment="Left" Margin="369,252,0,0" VerticalAlignment="Top" Height="36" Width="100" FontFamily="Arial Black" FontSize="24" Click="upd_Click"/>
-        <Button x:Name="del" Content="Delete" HorizontalAlignment="Left" Margin="195,252,0,0" VerticalAlignment="Top" Height="36" Width="110" FontFamily="Arial Black" FontSize="24" Click="del_Click"/>
+        <TextBox x:Name="price_t" HorizontalAlignment="Left" Margin="195,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="160" Height="36" FontFamily="Arial Black" FontSize="24" Grid.Row="1"/>
+        <Button x:Name="add" Content="add" HorizontalAlignment="Left" Margin="51,19,0,0" VerticalAlignment="Top" Height="36" Width="82" FontFamily="Arial Black" FontSize="24" Click="add_Click" Grid.Row="2"/>
+        <Button x:Name="upd" Content="update" HorizontalAlignment="Left" Margin="369,19,0,0" VerticalAlignment="Top" Height="36" Width="100" FontFamily="Arial Black" FontSize="24" Click="upd_Click" Grid.Row="2"/>
+        <Button x:Name="del" Content="Delete" HorizontalAlignment="Left" Margin="195,19,0,0" VerticalAlignment="Top" Height="36" Width="110" FontFamily="Arial Black" FontSize="24" Click="del_Click" Grid.Row="2"/>
 
     </Grid>
 </Page>

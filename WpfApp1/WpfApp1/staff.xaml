@@ -9,6 +9,14 @@
       Title="staff">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="12*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -16,8 +24,8 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button Content="add customer" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="29,145,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="add_customer"/>
-        <Button Content="view customer" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="424,293,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="view_customer"/>
-        <Button Content="add order" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="424,145,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="add_order"/>
-        <Button Content="view food" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="29,293,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="view_food"/>
+        <Button Content="view customer" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="8,18,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="view_customer" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="add order" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="8,145,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="add_order" Grid.Column="1"/>
+        <Button Content="view food" Background="#FF79F9F4" HorizontalAlignment="Left" Margin="29,18,0,0" FontSize="44" VerticalAlignment="Top" Width="348" Click="view_food" Grid.Row="1"/>
     </Grid>
 </Page>

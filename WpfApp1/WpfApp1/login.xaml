@@ -9,6 +9,15 @@
       Title="login">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="188*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="163*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -16,11 +25,11 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBox x:Name="name_t" HorizontalAlignment="Left" Margin="400,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="400,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="password_t" HorizontalAlignment="Left" Margin="400,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Label Foreground="White" Content="name" HorizontalAlignment="Left" Margin="202,126,0,0" VerticalAlignment="Top"/>
-        <Label Foreground="White" Content="password" HorizontalAlignment="Left" Margin="192,225,0,0" VerticalAlignment="Top"/>
-        <Button Content="login" HorizontalAlignment="Left" Margin="709,331,0,0" VerticalAlignment="Top" Click="login_button"/>
-        <Button Content="create account" HorizontalAlignment="Left" Margin="248,326,0,0" VerticalAlignment="Top" Click="signup_button"/>
+        <Label Foreground="White" Content="password" HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Center" Grid.Row="1"/>
+        <Button Content="login" HorizontalAlignment="Left" Margin="39,44,0,0" VerticalAlignment="Top" Click="login_button" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="create account" HorizontalAlignment="Left" Margin="248,39,0,0" VerticalAlignment="Top" Click="signup_button" Grid.Row="2"/>
 
     </Grid>
 </Page>

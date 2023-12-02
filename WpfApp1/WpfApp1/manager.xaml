@@ -9,6 +9,14 @@
       Title="manager">
 
     <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="197*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="191*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
@@ -16,9 +24,9 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button Content="manage staff" HorizontalAlignment="Left" Margin="45,109,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click"/>
-        <Button Content="search" HorizontalAlignment="Left" Margin="432,109,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_1"/>
-        <Button Content="manage branch" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Center" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_2"/>
-        <Button Content="manage food" HorizontalAlignment="Left" Margin="432,0,0,0" VerticalAlignment="Center" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_3"/>
+        <Button Content="search" HorizontalAlignment="Left" Margin="26,109,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_1" Grid.Column="1"/>
+        <Button Content="manage branch" HorizontalAlignment="Left" Margin="45,11,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_2" Grid.Row="1"/>
+        <Button Content="manage food" HorizontalAlignment="Left" Margin="26,11,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Arial Black" Height="46" Width="329" Click="Button_Click_3" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
 </Page>

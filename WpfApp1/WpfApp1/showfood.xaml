@@ -9,16 +9,22 @@
       Title="showfood">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="109*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="166*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>
                 <GradientStop Color="#FF15D1CA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="search" Foreground="Snow" FontSize="80" HorizontalAlignment="Left" Margin="274,-23,0,0" VerticalAlignment="Top" Width="364" Height="117"/>
-        <TextBox x:Name="search_t" HorizontalAlignment="Center" Margin="0,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="508" Height="75"/>
-        <Button x:Name="search" Content="search" Background="#FF79F9F4" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="66" Width="337" Click="search_Click"/>
-        <DataGrid x:Name="data_grid" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="0,297,0,0"/>
+        <Label Content="search" Foreground="Snow" FontSize="80" HorizontalAlignment="Left" Margin="274,-23,0,0" VerticalAlignment="Top" Width="364" Height="117" Grid.RowSpan="2"/>
+        <TextBox x:Name="search_t" HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="508" Height="75" Grid.Row="1"/>
+        <Button x:Name="search" Content="search" Background="#FF79F9F4" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Height="66" Width="336" Click="search_Click" Margin="0,7,0,0" Grid.Row="2"/>
+        <DataGrid x:Name="data_grid" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="0,13,0,0" Grid.Row="3"/>
 
     </Grid>
 </Page>

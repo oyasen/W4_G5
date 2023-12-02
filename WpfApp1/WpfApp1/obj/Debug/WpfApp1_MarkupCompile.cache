@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-G:\WpfApp1\WpfApp1\App.xaml
+C:\Users\yasen\w4_t5\WpfApp1\WpfApp1\App.xaml
 151053312676
 2-1957146511
 281257677894
-18-575836825
+181006550089
 login.xaml;MainWindow.xaml;manage customer.xaml;manage orders.xaml;manager staff.xaml;manager.xaml;manger branch.xaml;manger_food.xaml;search.xaml;show customers.xaml;showfood.xaml;sign up.xaml;staff login.xaml;staff.xaml;welcome.xaml;
 
 False

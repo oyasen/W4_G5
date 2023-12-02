@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="resturantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="_branch">
+    <Key>
+      <PropertyRef Name="b_id" />
+    </Key>
+    <Property Name="b_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="b_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="b_address" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_customers">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="c_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="c_phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="c_location" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_food">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="_managers">
+    <Key>
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="m_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="m_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="m_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="m_salary" Type="int" Nullable="false" />
+    <Property Name="m_phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="branch_id" Type="int" />
+  </EntityType>
+  <EntityType Name="_orders">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Name="o_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="o_date" Type="date" Nullable="false" />
+    <Property Name="f_name" Type="varchar" MaxLength="50" />
+    <Property Name="c_id" Type="int" />
+  </EntityType>
+  <EntityType Name="_staff">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="s_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="s_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="s_salary" Type="int" Nullable="false" />
+    <Property Name="s_age" Type="int" Nullable="false" />
+    <Property Name="s_phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="s_specialty" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="b_id" Type="int" />
+  </EntityType>
+  <Association Name="FK___managers__branc__60A75C0F">
+    <End Role="_branch" Type="Self._branch" Multiplicity="0..1" />
+    <End Role="_managers" Type="Self._managers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_branch">
+        <PropertyRef Name="b_id" />
+      </Principal>
+      <Dependent Role="_managers">
+        <PropertyRef Name="branch_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___orders__c_id__66603565">
+    <End Role="_customers" Type="Self._customers" Multiplicity="0..1" />
+    <End Role="_orders" Type="Self._orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_customers">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="_orders">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___orders__f_name__656C112C">
+    <End Role="_food" Type="Self._food" Multiplicity="0..1" />
+    <End Role="_orders" Type="Self._orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_food">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="_orders">
+        <PropertyRef Name="f_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___staff__b_id__5BE2A6F2">
+    <End Role="_branch" Type="Self._branch" Multiplicity="0..1" />
+    <End Role="_staff" Type="Self._staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="_branch">
+        <PropertyRef Name="b_id" />
+      </Principal>
+      <Dependent Role="_staff">
+        <PropertyRef Name="b_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="resturantModelStoreContainer">
+    <EntitySet Name="_branch" EntityType="Self._branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_customers" EntityType="Self._customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_food" EntityType="Self._food" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_managers" EntityType="Self._managers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_orders" EntityType="Self._orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="_staff" EntityType="Self._staff" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK___managers__branc__60A75C0F" Association="Self.FK___managers__branc__60A75C0F">
+      <End Role="_branch" EntitySet="_branch" />
+      <End Role="_managers" EntitySet="_managers" />
+    </AssociationSet>
+    <AssociationSet Name="FK___orders__c_id__66603565" Association="Self.FK___orders__c_id__66603565">
+      <End Role="_customers" EntitySet="_customers" />
+      <End Role="_orders" EntitySet="_orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK___orders__f_name__656C112C" Association="Self.FK___orders__f_name__656C112C">
+      <End Role="_food" EntitySet="_food" />
+      <End Role="_orders" EntitySet="_orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK___staff__b_id__5BE2A6F2" Association="Self.FK___staff__b_id__5BE2A6F2">
+      <End Role="_branch" EntitySet="_branch" />
+      <End Role="_staff" EntitySet="_staff" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

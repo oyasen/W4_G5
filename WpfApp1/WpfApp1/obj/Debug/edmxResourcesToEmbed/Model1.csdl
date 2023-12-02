@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="resturantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_branch">
+    <Key>
+      <PropertyRef Name="b_id" />
+    </Key>
+    <Property Name="b_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="b_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="b_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="C_managers" Relationship="Self.FK___managers__branc__60A75C0F" FromRole="C_branch" ToRole="C_managers" />
+    <NavigationProperty Name="C_staff" Relationship="Self.FK___staff__b_id__5BE2A6F2" FromRole="C_branch" ToRole="C_staff" />
+  </EntityType>
+  <EntityType Name="C_customers">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="c_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="c_location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="C_orders" Relationship="Self.FK___orders__c_id__66603565" FromRole="C_customers" ToRole="C_orders" />
+  </EntityType>
+  <EntityType Name="C_food">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="C_orders" Relationship="Self.FK___orders__f_name__656C112C" FromRole="C_food" ToRole="C_orders" />
+  </EntityType>
+  <EntityType Name="C_managers">
+    <Key>
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="m_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="m_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="m_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="m_salary" Type="Int32" Nullable="false" />
+    <Property Name="m_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="branch_id" Type="Int32" />
+    <NavigationProperty Name="C_branch" Relationship="Self.FK___managers__branc__60A75C0F" FromRole="C_managers" ToRole="C_branch" />
+  </EntityType>
+  <EntityType Name="C_orders">
+    <Key>
+      <PropertyRef Name="o_id" />
+    </Key>
+    <Property Name="o_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="o_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="f_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="c_id" Type="Int32" />
+    <NavigationProperty Name="C_customers" Relationship="Self.FK___orders__c_id__66603565" FromRole="C_orders" ToRole="C_customers" />
+    <NavigationProperty Name="C_food" Relationship="Self.FK___orders__f_name__656C112C" FromRole="C_orders" ToRole="C_food" />
+  </EntityType>
+  <EntityType Name="C_staff">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="s_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="s_salary" Type="Int32" Nullable="false" />
+    <Property Name="s_age" Type="Int32" Nullable="false" />
+    <Property Name="s_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="s_specialty" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="b_id" Type="Int32" />
+    <NavigationProperty Name="C_branch" Relationship="Self.FK___staff__b_id__5BE2A6F2" FromRole="C_staff" ToRole="C_branch" />
+  </EntityType>
+  <Association Name="FK___managers__branc__60A75C0F">
+    <End Role="C_branch" Type="Self.C_branch" Multiplicity="0..1" />
+    <End Role="C_managers" Type="Self.C_managers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_branch">
+        <PropertyRef Name="b_id" />
+      </Principal>
+      <Dependent Role="C_managers">
+        <PropertyRef Name="branch_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___staff__b_id__5BE2A6F2">
+    <End Role="C_branch" Type="Self.C_branch" Multiplicity="0..1" />
+    <End Role="C_staff" Type="Self.C_staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_branch">
+        <PropertyRef Name="b_id" />
+      </Principal>
+      <Dependent Role="C_staff">
+        <PropertyRef Name="b_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___orders__c_id__66603565">
+    <End Role="C_customers" Type="Self.C_customers" Multiplicity="0..1" />
+    <End Role="C_orders" Type="Self.C_orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_customers">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="C_orders">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK___orders__f_name__656C112C">
+    <End Role="C_food" Type="Self.C_food" Multiplicity="0..1" />
+    <End Role="C_orders" Type="Self.C_orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="C_food">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="C_orders">
+        <PropertyRef Name="f_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="resturantEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_branch" EntityType="Self.C_branch" />
+    <EntitySet Name="C_customers" EntityType="Self.C_customers" />
+    <EntitySet Name="C_food" EntityType="Self.C_food" />
+    <EntitySet Name="C_managers" EntityType="Self.C_managers" />
+    <EntitySet Name="C_orders" EntityType="Self.C_orders" />
+    <EntitySet Name="C_staff" EntityType="Self.C_staff" />
+    <AssociationSet Name="FK___managers__branc__60A75C0F" Association="Self.FK___managers__branc__60A75C0F">
+      <End Role="C_branch" EntitySet="C_branch" />
+      <End Role="C_managers" EntitySet="C_managers" />
+    </AssociationSet>
+    <AssociationSet Name="FK___staff__b_id__5BE2A6F2" Association="Self.FK___staff__b_id__5BE2A6F2">
+      <End Role="C_branch" EntitySet="C_branch" />
+      <End Role="C_staff" EntitySet="C_staff" />
+    </AssociationSet>
+    <AssociationSet Name="FK___orders__c_id__66603565" Association="Self.FK___orders__c_id__66603565">
+      <End Role="C_customers" EntitySet="C_customers" />
+      <End Role="C_orders" EntitySet="C_orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK___orders__f_name__656C112C" Association="Self.FK___orders__f_name__656C112C">
+      <End Role="C_food" EntitySet="C_food" />
+      <End Role="C_orders" EntitySet="C_orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
